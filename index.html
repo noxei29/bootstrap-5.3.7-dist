@@ -32,7 +32,8 @@
                             ข้อมูลเพิ่มเติม
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">สมัครสมาชิก</a></li>
+                            <li><a class="dropdown-item" href="#" data-bs-toggle="modal"
+                                    data-bs-target="#registerModal">สมัครสมาชิก</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
@@ -49,7 +50,7 @@
                         <img src="home.png" width="25" style="position: absolute; top: 15px; right: 90px;">
                     </li>
                     <li class="nav-item">
-                        <a href="" class="nav-link">เข้าสู่ระบบ</a>
+                        <a href="" class="nav-link" data-bs-toggle="modal" data-bs-target="#loginModal">เข้าสู่ระบบ</a>
                     </li>
                 </ul>
             </div>
@@ -98,30 +99,30 @@
         </button>
     </div>
     <!-- Nav -->
-     <div class="container-fluid my-4 bg-secondary p-2">
-         <ul class="nav">
-             <li class="nav-item btn btn-light mx-2">
-                 <a class="nav-link active" aria-current="page" href="#">หน่วยงานการศึกษา</a>
-             </li>
-             <li class="nav-item btn btn-light mx-2">
-                 <a class="nav-link active" aria-current="page" href="#">ฝ่ายบริหารทรัพยากร</a>
-             </li>
-             <li class="nav-item btn btn-light mx-2">
-                 <a class="nav-link" active href="#">ฝ่ายวิชาการ</a>
-             </li>
-             <li class="nav-item btn btn-light mx-2">
-                 <a class="nav-link" active href="#">ฝ่ายแผนงานและความร่วมมือ</a>
-             </li>
-             <li class="nav-item btn btn-light mx-2">
-                 <a class="nav-link" active href="#">ฝ่ายพัฒนากิจการนักเรียนนักศึกษา</a>
-             </li>
-             <li class="nav-item btn btn-light mx-2">
-                 <a class="nav-link" active href="#">ITA/ข้อมูลสาธารณะ</a>
-             </li>
-         </ul>
-     </div>
-     <!-- content -->
-      <div style="grid-template-columns: 1fr 2fr 1fr;" class="row d-grid gap-4">
+    <div class="container-fluid my-4 bg-secondary p-2">
+        <ul class="nav">
+            <li class="nav-item btn btn-light mx-2">
+                <a class="nav-link active" aria-current="page" href="#">หน่วยงานการศึกษา</a>
+            </li>
+            <li class="nav-item btn btn-light mx-2">
+                <a class="nav-link active" aria-current="page" href="#">ฝ่ายบริหารทรัพยากร</a>
+            </li>
+            <li class="nav-item btn btn-light mx-2">
+                <a class="nav-link" active href="#">ฝ่ายวิชาการ</a>
+            </li>
+            <li class="nav-item btn btn-light mx-2">
+                <a class="nav-link" active href="#">ฝ่ายแผนงานและความร่วมมือ</a>
+            </li>
+            <li class="nav-item btn btn-light mx-2">
+                <a class="nav-link" active href="#">ฝ่ายพัฒนากิจการนักเรียนนักศึกษา</a>
+            </li>
+            <li class="nav-item btn btn-light mx-2">
+                <a class="nav-link" active href="#">ITA/ข้อมูลสาธารณะ</a>
+            </li>
+        </ul>
+    </div>
+    <!-- content -->
+    <div style="grid-template-columns: 1fr 2fr 1fr;" class="row d-grid gap-4">
         <div class="col bg-white text-center p-3">
             <img src="logo.gif" width="200" class="img-thumbnail mt-5"><br>
             <div class="bg-white mb-3">
@@ -139,7 +140,7 @@
                 <img src="menu2.png" style="width: 90%;">
             </div>
         </div>
-        
+
         <div class="col bg-white">
             <div class="bg-white">
                 <img src="content.png" style="width: 90%;">
@@ -151,7 +152,7 @@
                 <img src="content3.png" style="width: 90%;">
             </div>
         </div>
-        
+
         <div class="col bg-white">
             <div class="bg-white">
                 <img src="right1.png" style="width: 90%;">
@@ -166,8 +167,141 @@
                 <img src="right4.png" style="width: 90%;">
             </div>
         </div>
-      </div>
+    </div>
+    <!-- Modal Login -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Login</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <form action="">
+                            <div class="form-floating mb-3">
+                                <input type="email" class="form-control" id="floatingInput"
+                                    placeholder="name@example.com">
+                                <label for="floatingInput">Email address</label>
+                            </div>
+                            <div class="form-floating">
+                                <input type="password" class="form-control" id="floatingPassword"
+                                    placeholder="Password">
+                                <label for="floatingPassword">Password</label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Log in</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <!-- Modal Register -->
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Create Account</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <form>
+                            <div style="display: grid; grid-template-columns: auto auto;">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control" id="floatingInput"
+                                            placeholder="firstname">
+                                        <label for="floatingInput">First name*</label>
+                                    </div>
+                                    <div class="form-floating mb-3">
+                                        <input type="email" class="form-control" id="floatingInput"
+                                        placeholder="lastname">
+                                        <label for="floatingInput">Last name</label>
+                                    </div>
+                                    <div class="form-floating mb-3" style="grid-column: 1 / span 2;">
+                                        <input type="email" class="form-control" id="floatingInput"
+                                            placeholder="name@example.com">
+                                        <label for="floatingInput">Email*</label>
+                                    </div>
+                                    <div class="form-floating mb-3">
+                                        <input type="password" class="form-control" id="floatingInput"
+                                            placeholder="password">
+                                        <label for="floatingInput">Password*</label>
+                                    </div>
+                                    <div class="form-floating mb-3">
+                                        <input type="password" class="form-control" id="floatingInput"
+                                            placeholder="password">
+                                        <label for="floatingInput">Confirm Password*</label>
+                                    </div>
+                                    <div class="mb-3" id="gender">
+                                        <form id="gender">
+                                            <label for="gender">Gender</label><br>
+                                            <input type="radio" value="male" id="male">
+                                            <label for="male">Male</label>
+                                            <input type="radio" value="female" id="female">
+                                            <label for="female">Female</label>
+                                        </form>
+                                    </div>
+                                    <div class="mb-3">
+                                        <form id="hobby">
+                                            <label for="hobby">Hobbies</label><br>
+                                            <input type="checkbox" id="music">
+                                            <label for="music">Music</label>
+                                            <input type="checkbox" id="sport">
+                                            <label for="sport">Sport</label><br>
+                                            <input type="checkbox" id="travel">
+                                            <label for="travel">Travel</label>
+                                            <input type="checkbox" id="movie">
+                                            <label for="movie">Movies</label>
+                                        </form>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="income">Source of income</label><br>
+                                        <select id="income">
+                                            <option value="employed">Employed</option>
+                                            <option value="business">Businessed</option>
+                                            <option value="entrepreneur">Entrepreneur</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <form id="rangeIncome" oninput="val.value = parseInt(range.value)">
+                                            <label for="rangeIncome">Income</label><br>
+                                            <input type="range" min="9" max="300" value="0" id="range">
+                                            <output name="val" for="range">0</output>k
+                                        </form>
+                                    </div>
+                                    <div class="mb-3">
+                                        <form>
+                                            <label for="upload">Upload profile picture</label>
+                                            <input type="file" id="upload">
+                                        </form>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="age">Age</label>
+                                        <input type="number">
+                                    </div>
+                                    <div class="form-floating mb-3" style="grid-column: 1 / span 2; width: 100%;">
+                                        <form>
+                                            <p>Bio</p>
+                                            <textarea id="bio" rows="4" cols="60"></textarea>
+                                        </form>
+                                    </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Create</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
